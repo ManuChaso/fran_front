@@ -1,4 +1,4 @@
-export const API_BASE_URL = /*'https://proyecto13backend.onrender.com/api'*/ 'http://localhost:5000/api'
+export const API_BASE_URL = /*'https://proyecto13backend.onrender.com/api'*/ 'https://fran-back.onrender.com/api'
 export const BASE_URL = 'http://localhost:5000'
 
 export const handleApiError = (error, customMessage) => {
