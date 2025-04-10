@@ -1,0 +1,107 @@
+.progreso-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.progreso-card,
+.tendencias-card {
+  padding: 30px;
+  margin: 30px;
+  background-color: #f9f9f9;
+}
+
+.progreso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progreso-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chart-container {
+  height: 400px;
+  position: relative;
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.tendencias-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tendencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tendencia-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.tendencia-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.tendencia-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.tendencia-value.aumento {
+  color: #e74c3c;
+}
+
+.tendencia-value.disminución {
+  color: #2ecc71;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .progreso-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .tendencias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progreso-card,
+  .tendencias-card {
+    padding: 20px;
+  }
+}

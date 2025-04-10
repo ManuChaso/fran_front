@@ -1,0 +1,174 @@
+.user-mensajes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+}
+
+.user-mensajes-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.user-mensajes-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.mensajes-simple-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mensajes-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.mensajes-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.conversacion-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mensajes-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensaje {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.mensaje.enviado {
+  justify-content: flex-end;
+}
+
+.mensaje.recibido {
+  justify-content: flex-start;
+}
+
+.mensaje-contenido {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.mensaje.enviado .mensaje-contenido {
+  background-color: #3182ce;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.mensaje.recibido .mensaje-contenido {
+  background-color: #e2e8f0;
+  color: #333;
+  border-bottom-left-radius: 5px;
+}
+
+.mensaje-contenido p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.mensaje-fecha {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+.mensaje-form {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.mensaje-form textarea {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  min-height: 80px;
+  resize: none;
+  font-family: inherit;
+}
+
+.mensaje-form textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.mensaje-form button {
+  align-self: flex-end;
+}
+
+.no-mensajes {
+  text-align: center;
+  color: #666;
+  padding: 40px 0;
+}
+
+.loading-container-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loading-spinner-small {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3182ce;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}

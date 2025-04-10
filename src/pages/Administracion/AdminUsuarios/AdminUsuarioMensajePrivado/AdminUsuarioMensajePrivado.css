@@ -1,0 +1,158 @@
+.admin-mensajes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+}
+
+.admin-mensajes-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.usuario-avatar-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+
+.usuario-info h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.mensajes-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensaje {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.mensaje.enviado {
+  justify-content: flex-end;
+}
+
+.mensaje.recibido {
+  justify-content: flex-start;
+}
+
+.mensaje-contenido {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.mensaje.enviado .mensaje-contenido {
+  background-color: #3182ce;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.mensaje.recibido .mensaje-contenido {
+  background-color: #e2e8f0;
+  color: #333;
+  border-bottom-left-radius: 5px;
+}
+
+.mensaje-contenido p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.mensaje-fecha {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+.mensaje-form {
+  display: flex;
+  gap: 10px;
+}
+
+.mensaje-form textarea {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  min-height: 80px;
+  resize: none;
+  font-family: inherit;
+}
+
+.mensaje-form textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.mensaje-form button {
+  align-self: flex-end;
+}
+
+.no-mensajes {
+  text-align: center;
+  color: #666;
+  padding: 40px 0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3182ce;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
